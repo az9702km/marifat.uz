@@ -244,7 +244,7 @@ $(function () {
           width: '73px',
           render: function (data, type, full, meta) {
             var $total = full['total'];
-            return '$' + $total;
+            return $total;
           }
         },
         {
@@ -283,51 +283,18 @@ $(function () {
           }
         }
       ],
-      order: [[1, 'desc']],
+      order: [[1, 'asc']],
       dom: '<"card-header pt-1 pb-25"<"head-label"><"dt-action-buttons text-end"B>>t',
       buttons: [
         {
-          extend: 'collection',
-          className: 'btn btn-outline-secondary dropdown-toggle',
-          text: feather.icons['external-link'].toSvg({ class: 'font-small-4 me-50' }) + 'Export',
-          buttons: [
-            {
-              extend: 'print',
-              text: feather.icons['printer'].toSvg({ class: 'font-small-4 me-50' }) + 'Print',
-              className: 'dropdown-item',
-              exportOptions: { columns: [1, 3, 4] }
-            },
-            {
-              extend: 'csv',
-              text: feather.icons['file-text'].toSvg({ class: 'font-small-4 me-50' }) + 'Csv',
-              className: 'dropdown-item',
-              exportOptions: { columns: [1, 3, 4] }
-            },
-            {
-              extend: 'excel',
-              text: feather.icons['file'].toSvg({ class: 'font-small-4 me-50' }) + 'Excel',
-              className: 'dropdown-item',
-              exportOptions: { columns: [1, 3, 4] }
-            },
-            {
-              extend: 'pdf',
-              text: feather.icons['clipboard'].toSvg({ class: 'font-small-4 me-50' }) + 'Pdf',
-              className: 'dropdown-item',
-              exportOptions: { columns: [1, 3, 4] }
-            },
-            {
-              extend: 'copy',
-              text: feather.icons['copy'].toSvg({ class: 'font-small-4 me-50' }) + 'Copy',
-              className: 'dropdown-item',
-              exportOptions: { columns: [1, 3, 4] }
-            }
-          ],
+          text: feather.icons['plus'].toSvg({ class: 'me-50 font-small-4' }) + 'Yangi xisobot qo\'shish',
+          className: 'create-new btn btn-primary',
+          attr: {
+            'data-bs-toggle': 'modal',
+            'data-bs-target': '#modals-slide-in'
+          },
           init: function (api, node, config) {
             $(node).removeClass('btn-secondary');
-            $(node).parent().removeClass('btn-group');
-            setTimeout(function () {
-              $(node).closest('.dt-buttons').removeClass('btn-group').addClass('d-inline-flex');
-            }, 50);
           }
         }
       ],
@@ -370,7 +337,7 @@ $(function () {
         $(document).find('[data-bs-toggle="tooltip"]').tooltip();
       }
     });
-    $('div.head-label').html('<h4 class="card-title">Invoices</h4>');
+    $('div.head-label').html('<h4 class="card-title">Xisobotlar tarixi</h4>');
   }
 
   // Filter form control to default size
