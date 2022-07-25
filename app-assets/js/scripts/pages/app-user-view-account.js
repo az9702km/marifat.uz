@@ -13,7 +13,7 @@ $(function () {
   // Variable declaration for table
   var dt_project_table = $('.datatable-project'),
     dtInvoiceTable = $('.invoice-table'),
-    invoicePreview = 'app-invoice-preview.html',
+    invoicePreview = 'xisobot.html',
     $tuman = 'tuman.html',
     assetPath = '../../../app-assets/';
 
@@ -284,20 +284,7 @@ $(function () {
         }
       ],
       order: [[1, 'asc']],
-      dom: '<"card-header pt-1 pb-25"<"head-label"><"dt-action-buttons text-end"B>>t',
-      buttons: [
-        {
-          text: feather.icons['plus'].toSvg({ class: 'me-50 font-small-4' }) + 'Yangi xisobot qo\'shish',
-          className: 'create-new btn btn-primary',
-          attr: {
-            'data-bs-toggle': 'modal',
-            'data-bs-target': '#modals-slide-in'
-          },
-          init: function (api, node, config) {
-            $(node).removeClass('btn-secondary');
-          }
-        }
-      ],
+      dom: '',
       // For responsive popup
       responsive: {
         details: {

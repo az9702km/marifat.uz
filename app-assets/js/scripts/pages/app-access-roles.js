@@ -114,14 +114,14 @@ $(function () {
           // User Status
           targets: 6,
           render: function (data, type, full, meta) {
-            var $status = full['status'];
+            var $rate = full['status'];
 
             return (
-              '<span class="badge rounded-pill ' +
-              statusObj[$status].class +
-              '" text-capitalized>' +
-              statusObj[$status].title +
-              '</span>'
+              `<span class="fw-bold"><i data-feather="star" style="
+              fill: #ff9f43;
+              stroke: #ff9f43;
+              color: #ff9f43;
+              margin-bottom:3px;"></i> ${$rate}</span>`
             );
           }
         },
