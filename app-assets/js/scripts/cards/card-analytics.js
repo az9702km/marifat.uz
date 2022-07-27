@@ -190,12 +190,8 @@ $(window).on('load', function () {
     colors: [window.colors.solid.primary, window.colors.solid.warning],
     series: [
       {
-        name: 'Earning',
-        data: [95, 177, 284, 256, 105, 63, 168, 218, 72]
-      },
-      {
-        name: 'Expense',
-        data: [-145, -80, -60, -180, -100, -60, -85, -75, -100]
+        name: 'Tadbirlar',
+        data: [95, 177, 284, 256, 105, 63, 168, 218, 172, 68, 208, 79, 108, 109]
       }
     ],
     dataLabels: {
@@ -214,7 +210,7 @@ $(window).on('load', function () {
       }
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+      categories: ['T.sh.', 'Tosh', 'Nam', 'Adj', 'Far', 'Sur', 'Sir', 'Jiz', 'Sam', 'Nav', 'Bux', 'Qash', 'Xor','QR'],
       labels: {
         style: {
           colors: $textMutedColor,

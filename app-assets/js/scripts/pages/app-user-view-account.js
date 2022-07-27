@@ -14,7 +14,7 @@ $(function () {
   var dt_project_table = $('.datatable-project'),
     dtInvoiceTable = $('.invoice-table'),
     invoicePreview = 'xisobot.html',
-    $tuman = 'tuman.html',
+    $tuman = 'viloyat.html',
     assetPath = '../../../app-assets/';
 
   if ($('body').attr('data-framework') === 'laravel') {
